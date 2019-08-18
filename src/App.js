@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,25 +9,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Table from 'react-bootstrap/Table';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
 
 function App() {
+  const [show, setShow] = useState(false);
+  const handleClick = () => setShow(true);
+  const handleClose = () => setShow(false);
   return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
     <Container>
         <Jumbotron>
           <h1 style={{"fontSize": 80}}>Design Manager</h1>
@@ -36,7 +25,7 @@ function App() {
         <Row>
           <Col xs={7}><h1>Designs</h1></Col>
           <Col xs={2}></Col>
-          <Col><Button variant="primary" block>Add a new design</Button></Col>
+          <Col><Button variant="primary" onClick={handleClick} block>Add a new design</Button></Col>
         </Row>
         <Table striped bordered hover responsive variant="dark">
             <tr>
@@ -47,6 +36,36 @@ function App() {
             </tr>
             <tbody id="content" />
         </Table>
+
+      {/* Pop up window */}
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+        <Modal.Title>Upload Design</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form>
+            <Form.Group controlId="form.design">
+              <Form.Label>Design</Form.Label>
+              <Form.Control type="file"/>
+              <Form.Text className="text-muted">Please upload your design here</Form.Text>
+            </Form.Group>
+            <Form.Group controlId="form.description">
+              <Form.Label>Description</Form.Label>
+              <Form.Control type="text" placeholder="Please enter description here" />
+            </Form.Group>
+            
+          </Form>
+        </Modal.Body>
+
+        <Modal.Footer>
+        <Button variant="secondary" onClick={handleClose}>
+          Cancel
+        </Button>
+        <Button variant="primary" onClick={handleClose}>
+          Upload
+        </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 }
