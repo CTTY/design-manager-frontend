@@ -78,7 +78,7 @@ function Content(props){
         <Button variant="primary" onClick={closeDelete}>
         Cancel
         </Button>
-        <Button variant="secondary" >
+        <Button variant="secondary" onClick={() => {props.deleteRow(props.id); closeDelete();}}>
         Yes
         </Button>
         </Modal.Footer>

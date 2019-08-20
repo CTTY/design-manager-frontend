@@ -12,7 +12,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
-import { statement } from '@babel/template';
 
 function App() {
   const [show, setShow] = useState(false);
@@ -38,7 +37,13 @@ function App() {
           "url":"World2"
         }
       )
-      handleClose();
+      return contents;
+    })
+  }
+
+  const deleteRow = (id) => {
+    setContents(contents => {
+      contents = contents.filter(content => {return content.id !== id});
       return contents;
     })
   }
@@ -76,7 +81,7 @@ function App() {
               {
                 contents.map((content) =>{
                   return (
-                    <Content id={content.id} title={content.title} url={content.url} />
+                    <Content id={content.id} title={content.title} url={content.url} deleteRow={deleteRow}/>
                   );
                 })
               }
@@ -108,7 +113,7 @@ function App() {
         <Button variant="secondary" onClick={handleClose}>
           Cancel
         </Button>
-        <Button variant="primary" onClick={addRow}>
+        <Button variant="primary" onClick={() =>{addRow(); handleClose();}}>
           Upload
         </Button>
         </Modal.Footer>
