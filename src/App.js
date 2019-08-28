@@ -1,4 +1,4 @@
-import React, {Component, setState, useEffect} from 'react';
+import React, {Component, setState, useState, useEffect} from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import './Upload.css';
@@ -16,86 +16,75 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+function App() {
 
-    this.state = {
-      show: false,
-      files: [],
-      uploading: false,
-      uploadProgress: {},
-      successfullUploaded: false
-    };
+  const [show, setShow] = useState(false);
+  const [files, setFiles] = useState([]);
+  const [uploading, setUploading] = useState(false);
+  const [uploadProgress, setUploadProgress] = useState({});
+  const [successfullUploaded, setSuccessfullUploaded] = useState(false);
 
-    this.handleClick = this.handleClick.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.deleteRow = this.deleteRow.bind(this);
-    this.onFilesAdded = this.onFilesAdded.bind(this);
-    this.uploadFiles = this.uploadFiles.bind(this);
-    this.sendRequest = this.sendRequest.bind(this);
-    this.renderActions = this.renderActions.bind(this);
-  }
-
-  handleClick = () => this.setState({show: true});
-  handleClose = () => this.setState({show: false});
+  const handleClick = () => setShow(true);
+  const handleClose = () => setShow(false);
 
   // need to implement delete uploaded files
-  deleteRow = (id) => {
-    this.setState(prevState => ({
-      files: prevState.files.filter(files => {return files.id !== id})
-    }))
+  const deleteRow = id => {
+    setFiles(files.filter(files => {return files.id !== id}))
   }
 
-  onFilesAdded(files) {
+  const onFilesAdded = (upfiles) => {
     console.log(files);
-    this.setState(prevState => ({
-      files: prevState.files.concat(files)
-    }));
+    setFiles(files => (
+      files.concat(upfiles)
+    ))
+    console.log(files);
   }
 
-  async uploadFiles() {
-    this.setState({ uploadProgress: {}, uploading: true });
+  const uploadFiles = async() => {
+    setUploadProgress({});
+    setUploading(true);
     const promises = [];
-    this.state.files.forEach(file => {
-      promises.push(this.sendRequest(file));
+    files.forEach(file => {
+      promises.push(sendRequest(file));
     });
     try {
       await Promise.all(promises);
 
-      this.setState({ successfullUploaded: true, uploading: false });
+      setSuccessfullUploaded(true);
+      setUploading(false);
     } catch (e) {
-      // Not Production ready! Do some error handling here instead...
-      this.setState({ successfullUploaded: true, uploading: false });
+      // error handling is needed
+      setSuccessfullUploaded(true);
+      setUploading(false);
     }
   }
 
-  sendRequest(file) {
+  const sendRequest = file => {
     return new Promise((resolve, reject) => {
       const req = new XMLHttpRequest();
 
       req.upload.addEventListener("progress", event => {
         if (event.lengthComputable) {
-          const copy = { ...this.state.uploadProgress };
+          const copy = { ...uploadProgress };
           copy[file.name] = {
             state: "pending",
             percentage: (event.loaded / event.total) * 100
           };
-          this.setState({ uploadProgress: copy });
+          setUploadProgress(copy);
         }
       });
 
       req.upload.addEventListener("load", event => {
-        const copy = { ...this.state.uploadProgress };
+        const copy = { ...uploadProgress };
         copy[file.name] = { state: "done", percentage: 100 };
-        this.setState({ uploadProgress: copy });
+        setUploadProgress(copy);
         resolve(req.response);
       });
 
       req.upload.addEventListener("error", event => {
-        const copy = { ...this.state.uploadProgress };
+        const copy = { ...uploadProgress };
         copy[file.name] = { state: "error", percentage: 0 };
-        this.setState({ uploadProgress: copy });
+        setUploadProgress(copy);
         reject(req.response);
       });
 
@@ -107,9 +96,9 @@ class App extends Component {
     });
   }
 
-  renderProgress(file) {
-    const uploadProgress = this.state.uploadProgress[file.name];
-    if (this.state.uploading || this.state.successfullUploaded) {
+  const renderProgress = file => {
+    const uploadProgress = setUploadProgress[file.name];
+    if (uploading || successfullUploaded) {
       return (
         <div className="ProgressWrapper">
           <Progress progress={uploadProgress ? uploadProgress.percentage : 0} />
@@ -127,11 +116,12 @@ class App extends Component {
     }
   }
 
-  renderActions() {
-    if (this.state.successfullUploaded) {
+  const renderActions = () => {
+    if (successfullUploaded) {
       return (
         <button
-          onClick={() => this.setState({ files: [], successfullUploaded: false })}
+          // onClick={() => this.setState({ files: [], successfullUploaded: false })}
+          onClick={()=>setFiles([])}
         >
           Clear
         </button>
@@ -139,8 +129,8 @@ class App extends Component {
     } else {
       return (
         <button
-          disabled={this.state.files.length < 0 || this.state.uploading}
-          onClick={this.uploadFiles}
+          disabled={files.length < 0 || uploading}
+          onClick={uploadFiles}
         >
           Upload
         </button>
@@ -156,7 +146,6 @@ class App extends Component {
   //   //   "<h1> Hello World </h1>"
   //   // );
   // }
-  render(){
     return (
       <Container>
           <Jumbotron>
@@ -166,7 +155,7 @@ class App extends Component {
           <Row>
             <Col xs={7}><h1>Designs</h1></Col>
             <Col xs={2}></Col>
-            <Col><Button variant="primary" onClick={this.handleClick} block>Add a new design</Button></Col>
+            <Col><Button variant="primary" onClick={handleClick} block>Add a new design</Button></Col>
           </Row>
           
           <Table>
@@ -179,9 +168,9 @@ class App extends Component {
                 </tr>
               </thead>
                 {
-                  this.state.files.map((content) =>{
+                  files.map((content) =>{
                     return (
-                      <Content id={content.id} title={content.name} url={content.url} deleteRow={this.deleteRow}/>
+                      <Content id={content.id} title={content.name} url={content.url} deleteRow={deleteRow}/>
                     );
                   })
                 }
@@ -190,7 +179,7 @@ class App extends Component {
              
   
         {/* Add Modal Area */}
-        <Modal show={this.state.show} onHide={this.handleClose}>
+        <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
           <Modal.Title>Upload Design</Modal.Title>
           </Modal.Header>
@@ -201,16 +190,16 @@ class App extends Component {
                   <div className="Content">
                     <div>
                       <Dropzone
-                        onFilesAdded={this.onFilesAdded}
-                        disabled={this.state.uploading || this.state.successfullUploaded}
+                        onFilesAdded={onFilesAdded}
+                        disabled={uploading || successfullUploaded}
                       />
                     </div>
                     <div className="Files">
-                      {this.state.files.map(file => {
+                      {files.map(file => {
                         return (
                           <div key={file.name} className="Row">
                             <span className="Filename">{file.name}</span>
-                            {this.renderProgress(file)}
+                            {renderProgress(file)}
                           </div>
                         );
                       })}
@@ -226,15 +215,14 @@ class App extends Component {
           </Modal.Body>
   
           <Modal.Footer>
-          <Button variant="secondary" onClick={this.handleClose}>
+          <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <div>{this.renderActions()}</div>
+          <div>{renderActions()}</div>
           </Modal.Footer>
         </Modal>
       </Container>
     );
-  }
 }
 
 export default App;
