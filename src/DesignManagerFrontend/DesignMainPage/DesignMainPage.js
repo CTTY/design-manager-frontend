@@ -146,6 +146,25 @@ function DesignMainPage() {
   // }
     return (
       <Container>
+            {/* breadcrumb */}
+            <div className="breadcumb-area">
+                <div className="container h-100">
+                    <div className="row h-100 align-items-end">
+                        <div className="col-12">
+                            <div className="breadcumb--con">
+                                <h2 className="title">DesignManager</h2>
+                                <nav aria-label="breadcrumb">
+                                    <ol className="breadcrumb">
+                                        <li className="breadcrumb-item"><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+                                        <li className="breadcrumb-item active" aria-current="page">DesignManager</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
           <Jumbotron>
             <h1 style={{"fontSize": 80}}>Design Manager</h1>
             <p style={{"fontSize": 30}}> Manage your design here</p>
