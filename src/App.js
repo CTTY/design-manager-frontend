@@ -3,8 +3,8 @@ import React, {Component, setState, useState, useEffect} from 'react';
 import './App.css';
 import './Upload.css';
 import Content from './Content';
-import Progress from './Progress/Progress';
-import Dropzone from './Dropzone/Dropzone';
+import Progress from './DesignManagerFrontend/Progress/Progress';
+import Dropzone from './DesignManagerFrontend/Dropzone/Dropzone';
 
 // Import Bootstrap Components
 import Container from 'react-bootstrap/Container';
