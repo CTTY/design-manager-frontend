@@ -14,7 +14,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import Table from 'react-bootstrap/Table';
 
-function MainPage() {
+function DesignMainPage() {
 
   const [show, setShow] = useState(false);
   const [files, setFiles] = useState([]);
@@ -223,4 +223,4 @@ function MainPage() {
     );
 }
 
-export default MainPage;
+export default DesignMainPage;

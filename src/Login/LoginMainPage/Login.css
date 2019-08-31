@@ -1,0 +1,29 @@
+.login-container {
+    max-width: 420px;
+}
+
+.login-form {
+    max-width: 300px;
+  }
+
+.login-form .email{
+    background-color: #ffffff;
+    padding: 8px;
+    width:300px;
+    margin-top:0 auto;
+    font-size:1em;
+    border-radius:4px;
+  }
+
+.login-form .password{
+    background-color: #ffffff;
+    padding: 8px;
+    width:300px;
+    font-size:1em;
+  }
+
+.login-form-button {
+    width: 100%;
+    background-color: #030303d0;
+    color: #ffffff;
+}
