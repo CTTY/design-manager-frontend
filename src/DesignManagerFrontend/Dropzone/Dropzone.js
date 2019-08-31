@@ -47,7 +47,12 @@ class Dropzone extends Component {
           multiple
           onChange={this.onFilesAdded}
         />
-        <span>Upload Designs</span>
+        <img
+          alt="upload"
+          className="Icon"
+          src="baseline-cloud_upload-24px.svg"
+        />
+        <span>Upload Files</span>
       </div>
     );
   }
