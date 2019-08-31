@@ -25,24 +25,24 @@ class Header extends Component {
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/">- Projects</a></li>
+                   <li><a href="/">- Projects</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/Login">- Log In</a></li>
+                   <li><a href="login">- Log In</a></li>
                    <li><a href="https://abbylululu.github.io/Projects/#/DesignManager">- Design Manager</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/Email">- Email</a></li>
+                   <li><a href="/Email">- Email</a></li>
                  </ul>
                 </li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/">Projects</a></li>,
+                <li><a href="/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/Login">Log In</a></li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/DesignManager">Design Manager</a></li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/Email">Email</a></li>,
+                <li><a href="login">Log In</a></li>,
+                <li><a href="/DesignMainPage">Design Manager</a></li>,
+                <li><a href="/Email">Email</a></li>,
                 <li><Nav.Link href="https://abbylululu.github.io/ArtCollectionWebsite/" onSelect={this.handleMenuClick}>Log out</Nav.Link></li>,
             ]
         } else {
@@ -51,24 +51,24 @@ class Header extends Component {
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/">- Projects</a></li>
+                   <li><a href="/">- Projects</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/Login">- Log In</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/DesignManager">- Design Manager</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/Email">- Email</a></li>
+                   <li><a href="/login">- Log In</a></li>
+                   <li><a href="/DesignMainPage">- Design Manager</a></li>
+                   <li><a href="/Email">- Email</a></li>
                  </ul>
                 </li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/">Projects</a></li>,
+                <li><a href="/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/Login">Log In</a></li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/DesignManager">Design Manager</a></li>,
-                <li><a href="https://abbylululu.github.io/Projects/#/Email">Email</a></li>,
+                <li><a href="/login">Log In</a></li>,
+                <li><a href="/DesignMainPage">Design Manager</a></li>,
+                <li><a href="/Email">Email</a></li>,
             ]
         }
 
