@@ -1,8 +1,6 @@
 import React, {Component, setState, useState, useEffect} from 'react';
-// import logo from './logo.svg';
-import '../../App.css';
 import './Upload.css';
-import Content from '../../Content';
+import Content from '../Content/Content';
 import Progress from '../Progress/Progress';
 import Dropzone from '../Dropzone/Dropzone';
 

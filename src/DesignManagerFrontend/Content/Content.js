@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import EditButtonGroup from './EditButtonGroup';
+import EditButtonGroup from '../EditButtonGroup/EditButtonGroup';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
