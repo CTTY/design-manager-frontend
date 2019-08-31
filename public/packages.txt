@@ -1,0 +1,6 @@
+npm install react-boostrap boostrap
+npm install --save react-router react-router-dom
+npm install --save reactstrap react react-dom
+npm i -- save axios
+npm install antd
+npm install nodemailer

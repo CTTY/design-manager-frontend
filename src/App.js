@@ -1,228 +1,119 @@
-import React, {Component, setState, useState, useEffect} from 'react';
-// import logo from './logo.svg';
+import React, {Component} from 'react';
+import ReactDOM from "react-dom";
+import { withRouter, Route, Switch, Link } from "react-router-dom";
+
 import './App.css';
-import './Upload.css';
-import Content from './Content';
-import Progress from './Progress/Progress';
-import Dropzone from './Dropzone/Dropzone';
+import './style.css';
 
-// Import Bootstrap Components
-import Container from 'react-bootstrap/Container';
-import Jumbotron from 'react-bootstrap/Jumbotron';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import Form from 'react-bootstrap/Form';
-import Table from 'react-bootstrap/Table';
+import { getCurrentUser } from './Login/Utils/APIUtils';
+import { ACCESS_TOKEN } from './Login/Constants/Constants';
+import { notification } from 'antd';
 
-function App() {
+// import Preloader from './Preloader/Preloader';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+import DesignMainPage from './DesignManagerFrontend/DesignMainPage/DesignMainPage';
+import RBCarousel from './ArtGallery/Carousel/Carousel';
+import Login from './Login/LoginMainPage/LoginMainPage';
+import PrivateRoute from './Login/PrivateRoute/PrivateRoute';
+import Email from './Email/EmailMainPage';
 
-  const [show, setShow] = useState(false);
-  const [files, setFiles] = useState([]);
-  const [uploading, setUploading] = useState(false);
-  const [uploadProgress, setUploadProgress] = useState({});
-  const [successfullUploaded, setSuccessfullUploaded] = useState(false);
 
-  const handleClick = () => setShow(true);
-  const handleClose = () => setShow(false);
 
-  // need to implement delete uploaded files
-  const deleteRow = id => {
-    setFiles(files.filter(files => {return files.id !== id}))
-  }
-
-  const onFilesAdded = (upfiles) => {
-    console.log(files);
-    setFiles(files => (
-      files.concat(upfiles)
-    ))
-    console.log(files);
-  }
-
-  const uploadFiles = async() => {
-    setUploadProgress({});
-    setUploading(true);
-    const promises = [];
-    files.forEach(file => {
-      promises.push(sendRequest(file));
-    });
-    try {
-      await Promise.all(promises);
-
-      setSuccessfullUploaded(true);
-      setUploading(false);
-    } catch (e) {
-      // error handling is needed
-      setSuccessfullUploaded(true);
-      setUploading(false);
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentUser: null,
+      isAuthenticated: false,
+      isLoading: false
     }
+    this.handleLogout = this.handleLogout.bind(this);
+    this.loadCurrentUser = this.loadCurrentUser.bind(this);
+    this.handleLogin = this.handleLogin.bind(this);
+
+    notification.config({
+      placement: 'topRight',
+      top: 70,
+      duration: 3,
+    });    
   }
 
-  const sendRequest = file => {
-    return new Promise((resolve, reject) => {
-      const req = new XMLHttpRequest();
-
-      req.upload.addEventListener("progress", event => {
-        if (event.lengthComputable) {
-          const copy = { ...uploadProgress };
-          copy[file.name] = {
-            state: "pending",
-            percentage: (event.loaded / event.total) * 100
-          };
-          setUploadProgress(copy);
-        }
+  loadCurrentUser() {
+    this.setState({
+      isLoading: true
+    });
+    getCurrentUser()
+    .then(response => {
+      this.setState({
+        currentUser: response,
+        isAuthenticated: true,
+        isLoading: false
       });
-
-      req.upload.addEventListener("load", event => {
-        const copy = { ...uploadProgress };
-        copy[file.name] = { state: "done", percentage: 100 };
-        setUploadProgress(copy);
-        resolve(req.response);
-      });
-
-      req.upload.addEventListener("error", event => {
-        const copy = { ...uploadProgress };
-        copy[file.name] = { state: "error", percentage: 0 };
-        setUploadProgress(copy);
-        reject(req.response);
-      });
-
-      const formData = new FormData();
-      formData.append("file", file, file.name);
-
-      req.open("POST", "http://localhost:8000/upload");
-      req.send(formData);
+    }).catch(error => {
+      this.setState({
+        isLoading: false
+      });  
     });
   }
 
-  const renderProgress = file => {
-    const uploadProgress = setUploadProgress[file.name];
-    if (uploading || successfullUploaded) {
-      return (
-        <div className="ProgressWrapper">
-          <Progress progress={uploadProgress ? uploadProgress.percentage : 0} />
-          <img
-            className="CheckIcon"
-            alt="done"
-            src="baseline-check_circle_outline-24px.svg"
-            style={{
-              opacity:
-                uploadProgress && uploadProgress.state === "done" ? 0.5 : 0
-            }}
-          />
-        </div>
-      );
-    }
+  componentDidMount() {
+    this.loadCurrentUser();
   }
 
-  const renderActions = () => {
-    if (successfullUploaded) {
-      return (
-        <button
-          // onClick={() => this.setState({ files: [], successfullUploaded: false })}
-          onClick={()=>setFiles([])}
-        >
-          Clear
-        </button>
-      );
-    } else {
-      return (
-        <button
-          disabled={files.length < 0 || uploading}
-          onClick={uploadFiles}
-        >
-          Upload
-        </button>
-      );
-    }
+  handleLogout(redirectTo="https://abbylululu.github.io/ArtCollectionWebsite/", notificationType="success", description="You're successfully logged out.") {
+    localStorage.removeItem(ACCESS_TOKEN);
+
+    this.setState({
+      currentUser: null,
+      isAuthenticated: false
+    });
+
+    this.props.history.push(redirectTo);
+    
+    notification[notificationType]({
+      description: description,
+    });
   }
 
-  // useEffect(() => {
-  //   load();
-  // },[contents]);
-  // const load = () => {
-  //   // document.getElementById("content").appendChild(
-  //   //   "<h1> Hello World </h1>"
-  //   // );
-  // }
+  handleLogin() {
+    notification.success({
+      description: "You're successfully logged in.",
+    });
+    this.loadCurrentUser();
+    this.props.history.push("/DesignManager");
+  }
+
+  render(){
     return (
-      <Container>
-          <Jumbotron>
-            <h1 style={{"fontSize": 80}}>Design Manager</h1>
-            <p style={{"fontSize": 30}}> Manage your design here</p>
-          </Jumbotron>
-          <Row>
-            <Col xs={7}><h1>Designs</h1></Col>
-            <Col xs={2}></Col>
-            <Col><Button variant="primary" onClick={handleClick} block>Add a new design</Button></Col>
-          </Row>
-          
-          <Table>
-              <thead>
-                <tr>
-                <th width="10%">#</th>
-                <th width="25%">Title</th>
-                <th width="30%">URL</th>
-                <th width="35%">Action</th>
-                </tr>
-              </thead>
-                {
-                  files.map((content) =>{
-                    return (
-                      <Content id={content.id} title={content.name} url={content.url} deleteRow={deleteRow}/>
-                    );
-                  })
-                }
-          </Table>
-          
-             
-  
-        {/* Add Modal Area */}
-        <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-          <Modal.Title>Upload Design</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <Form>
-              <Form.Group controlId="form.design">
-                <div className="Upload">
-                  <div className="Content">
-                    <div>
-                      <Dropzone
-                        onFilesAdded={onFilesAdded}
-                        disabled={uploading || successfullUploaded}
-                      />
-                    </div>
-                    <div className="Files">
-                      {files.map(file => {
-                        return (
-                          <div key={file.name} className="Row">
-                            <span className="Filename">{file.name}</span>
-                            {renderProgress(file)}
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </Form.Group>
-              <Form.Group controlId="form.description">
-                <Form.Label>Description</Form.Label>
-                <Form.Control type="text" placeholder="Please enter description here" />
-              </Form.Group>
-            </Form>
-          </Modal.Body>
-  
-          <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cancel
-          </Button>
-          <div>{renderActions()}</div>
-          </Modal.Footer>
-        </Modal>
-      </Container>
+      <React.Fragment>
+        {/* <Preloader /> */}
+        <Header 
+        isAuthenticated={this.state.isAuthenticated}
+        currentUser={this.state.currentUser}
+        onLogout={this.handleLogout}/>
+        <Switch>
+          <Route path='/redirectToStatic' component={() => { 
+          window.location.href = 'https://github.com/CTTY/art-gallery'; 
+          return null;
+          }}/>
+          <Route exact path="/" component={RBCarousel} />
+          <Route exact path="/Email" component={Email} />
+          <Route path="/login" 
+                 render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
+          <Route path="/DesignMainPage" component={DesignMainPage} />
+          <PrivateRoute authenticated={this.state.isAuthenticated} path="/log" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
+      </Switch>
+        <Footer />
+        {/* <script src="./js/jquery.min.js"></script>
+        <script src="./js/popper.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/mona.bundle.js"></script>
+        <script src="./js/default-assets/active.js"></script> */}
+      </React.Fragment>
+      
     );
+  }
 }
 
 export default App;
