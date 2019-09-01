@@ -21,54 +21,54 @@ class Header extends Component {
         let menuItems;
         if(this.props.currentUser){
             menuItems=[
-                <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">Home</a></li>,
+                <li><a href="https://ctty.github.io/ArtCollectionWebsite/">Home</a></li>,
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="/">- Projects</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="login">- Log In</a></li>
-                   <li><a href="https://abbylululu.github.io/Projects/#/DesignManager">- Design Manager</a></li>
-                   <li><a href="/Email">- Email</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/">- Home</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/">- Projects</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/login">- Log In</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">- Design Manager</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">- Email</a></li>
                  </ul>
                 </li>,
-                <li><a href="/">Projects</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="login">Log In</a></li>,
-                <li><a href="/DesignMainPage">Design Manager</a></li>,
-                <li><a href="/Email">Email</a></li>,
-                <li><Nav.Link href="https://abbylululu.github.io/ArtCollectionWebsite/" onSelect={this.handleMenuClick}>Log out</Nav.Link></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/login">Log In</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">Design Manager</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">Email</a></li>,
+                <li><Nav.Link href="https://ctty.github.io/ArtCollectionWebsite/" onSelect={this.handleMenuClick}>Log out</Nav.Link></li>,
             ]
         } else {
             menuItems=[
-                <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">Home</a></li>,
+                <li><a href="https://ctty.github.io/ArtCollectionWebsite/">Home</a></li>,
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="/">- Projects</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="/login">- Log In</a></li>
-                   <li><a href="/DesignMainPage">- Design Manager</a></li>
-                   <li><a href="/Email">- Email</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/">- Home</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/">- Projects</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/login">- Log In</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">- Design Manager</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">- Email</a></li>
                  </ul>
                 </li>,
-                <li><a href="/">Projects</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
-                   <li><a href="https://abbylululu.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
+                   <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="/login">Log In</a></li>,
-                <li><a href="/DesignMainPage">Design Manager</a></li>,
-                <li><a href="/Email">Email</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/login">Log In</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">Design Manager</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">Email</a></li>,
             ]
         }
 
@@ -81,7 +81,7 @@ class Header extends Component {
                             <div className="bg-curve" style={{'background-image' : 'url(1' + '../img/core-img/curve.png' + ')'}}></div>
                             
                             {/* logo */}
-                            <Navbar.Brand href="https://abbylululu.github.io/ArtCollectionWebsite/">
+                            <Navbar.Brand href="https://ctty.github.io/ArtCollectionWebsite/">
                                 <img
                                     alt=""
                                     src="../img/core-img/logo.jpeg"
