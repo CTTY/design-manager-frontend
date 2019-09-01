@@ -100,11 +100,6 @@ class App extends Component {
           <PrivateRoute authenticated={this.state.isAuthenticated} path="/DesignMainPage" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
       </Switch>
         <Footer />
-        {/* <script src="./js/jquery.min.js"></script>
-        <script src="./js/popper.min.js"></script>
-        <script src="./js/bootstrap.min.js"></script>
-        <script src="./js/mona.bundle.js"></script>
-        <script src="./js/default-assets/active.js"></script> */}
       </React.Fragment>
       
     );
