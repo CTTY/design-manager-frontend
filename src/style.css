@@ -2054,6 +2054,10 @@ ul {
       background-color: #0085d7; }
     .single-footer-widget .footer-social-info a.youtube {
       background-color: #e20000; }
+    .single-footer-widget .footer-social-info a.github {
+      background-color: #0d0e0e; }
+    .single-footer-widget .footer-social-info a.linkedin {
+      background-color: #0085d7; }
     @media only screen and (min-width: 992px) and (max-width: 1199px) {
       .single-footer-widget .footer-social-info a {
         width: 30px;
