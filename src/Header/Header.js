@@ -1,10 +1,7 @@
 import React, {Component} from 'react';
 import '../style.css';
 
-import { Nav, Navbar, NavItem } from "react-bootstrap";
-import {BrowserRouter as Router, Link, withRouter, Route} from 'react-router-dom';
-import Button from 'react-bootstrap/Button';
-import { Layout, Menu, Dropdown, Icon } from 'antd';
+import { Nav, Navbar} from "react-bootstrap";
 
 // style={{background-image : url(./img/core-img/curve.png)}}
 class Header extends Component {
@@ -25,26 +22,28 @@ class Header extends Component {
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="/">- Projects</a></li>
+
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/">- Projects</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="login">- Log In</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/login">- Log In</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">- DesignManager</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">- Email</a></li>
 
-                   <li><a href="https://ctty.github.io/Projects/#/DesignManager">- Design Manager</a></li>
-
-                   <li><a href="/Email">- Email</a></li>
                  </ul>
                 </li>,
-                <li><a href="/">Projects</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="login">Log In</a></li>,
-                <li><a href="/DesignMainPage">Design Manager</a></li>,
-                <li><a href="/Email">Email</a></li>,
+
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/login">Log In</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">Design Manager</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">Email</a></li>,
+
                 <li><Nav.Link href="https://ctty.github.io/ArtCollectionWebsite/" onSelect={this.handleMenuClick}>Log out</Nav.Link></li>,
             ]
         } else {
@@ -53,24 +52,26 @@ class Header extends Component {
                 <li><a href="#">Pages</a>
                  <ul className="dropdown">
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/">- Home</a></li>
-                   <li><a href="/">- Projects</a></li>
+
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/">- Projects</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
-                   <li><a href="/login">- Log In</a></li>
-                   <li><a href="/DesignMainPage">- DesignManager</a></li>
-                   <li><a href="/Email">- Email</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/login">- Log In</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">- DesignManager</a></li>
+                   <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">- Email</a></li>
+
                  </ul>
                 </li>,
-                <li><a href="/">Projects</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/">Projects</a></li>,
                 <li><a href="#">About Us</a>
                  <ul className="dropdown">
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                  </ul>
                 </li>,
-                <li><a href="/login">Log In</a></li>,
-                <li><a href="/DesignMainPage">Design Manager</a></li>,
-                <li><a href="/Email">Email</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/login">Log In</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">Design Manager</a></li>,
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">Email</a></li>,
             ]
         }
 
