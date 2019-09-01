@@ -50,7 +50,7 @@ function Footer(){
                     <div className="footer-social-info">
                         <a href="https://github.com/CTTY" className="github" data-toggle="tooltip" data-placement="top" title="GitHub"><i
                                     className="fa fa-github"></i></a>
-                        <a href="https://github.com/CTTY" className="linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i
+                        <a href="https://www.linkedin.com/in/yexiang-chang/" className="linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i
                                     className="fa fa-linkedin"></i></a>
                         <a href="https://www.facebook.com/profile.php?id=100009688397549" className="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
                                 className="fa fa-facebook"></i></a>
