@@ -81,7 +81,7 @@ class App extends Component {
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();
-    this.props.history.push("/DesignManager");
+    this.props.history.push("/DesignMainPage");
   }
 
   render(){
@@ -93,16 +93,11 @@ class App extends Component {
         currentUser={this.state.currentUser}
         onLogout={this.handleLogout}/>
         <Switch>
-          <Route path='/redirectToStatic' component={() => { 
-          window.location.href = 'https://github.com/CTTY/art-gallery'; 
-          return null;
-          }}/>
           <Route exact path="/" component={RBCarousel} />
           <Route exact path="/Email" component={Email} />
           <Route path="/login" 
                  render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
-          <Route path="/DesignMainPage" component={DesignMainPage} />
-          <PrivateRoute authenticated={this.state.isAuthenticated} path="/log" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
+          <PrivateRoute authenticated={this.state.isAuthenticated} path="/DesignMainPage" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
       </Switch>
         <Footer />
         {/* <script src="./js/jquery.min.js"></script>
