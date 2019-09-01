@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad463a0b.chunk.css",
-    "main.js": "/static/js/main.aa526c96.chunk.js",
-    "main.js.map": "/static/js/main.aa526c96.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.71935d5f.js",
-    "runtime~main.js.map": "/static/js/runtime~main.71935d5f.js.map",
-    "static/css/2.62d407a6.chunk.css": "/static/css/2.62d407a6.chunk.css",
-    "static/js/2.2a1dce99.chunk.js": "/static/js/2.2a1dce99.chunk.js",
-    "static/js/2.2a1dce99.chunk.js.map": "/static/js/2.2a1dce99.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.98f55e5ae74bb5b238398b1626dccbe9.js": "/precache-manifest.98f55e5ae74bb5b238398b1626dccbe9.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.62d407a6.chunk.css.map": "/static/css/2.62d407a6.chunk.css.map",
-    "static/css/main.ad463a0b.chunk.css.map": "/static/css/main.ad463a0b.chunk.css.map",
-    "static/media/style.css": "/static/media/fontawesome-webfont.fee66e71.woff",
-    "static/media/react-bootstrap-carousel.css": "/static/media/react-bootstrap-carousel.f7448c04.ttf"
+    "main.css": "/design-manager-frontend/static/css/main.0f08f2eb.chunk.css",
+    "main.js": "/design-manager-frontend/static/js/main.2a8dcb68.chunk.js",
+    "main.js.map": "/design-manager-frontend/static/js/main.2a8dcb68.chunk.js.map",
+    "runtime~main.js": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js",
+    "runtime~main.js.map": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js.map",
+    "static/css/2.13645106.chunk.css": "/design-manager-frontend/static/css/2.13645106.chunk.css",
+    "static/js/2.b037428f.chunk.js": "/design-manager-frontend/static/js/2.b037428f.chunk.js",
+    "static/js/2.b037428f.chunk.js.map": "/design-manager-frontend/static/js/2.b037428f.chunk.js.map",
+    "index.html": "/design-manager-frontend/index.html",
+    "precache-manifest.3e8fa7568b9c8fb4017e3cc02b9da067.js": "/design-manager-frontend/precache-manifest.3e8fa7568b9c8fb4017e3cc02b9da067.js",
+    "service-worker.js": "/design-manager-frontend/service-worker.js",
+    "static/css/2.13645106.chunk.css.map": "/design-manager-frontend/static/css/2.13645106.chunk.css.map",
+    "static/css/main.0f08f2eb.chunk.css.map": "/design-manager-frontend/static/css/main.0f08f2eb.chunk.css.map",
+    "static/media/style.css": "/design-manager-frontend/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/react-bootstrap-carousel.css": "/design-manager-frontend/static/media/react-bootstrap-carousel.f7448c04.ttf"
   }
 }
