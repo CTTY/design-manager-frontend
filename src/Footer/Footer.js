@@ -19,7 +19,7 @@ function Footer(){
                 <Navbar.Brand href="/index.html" className="d-block mb-4">
                             <img
                                 alt=""
-                                src="../img/core-img/logo.jpeg"
+                                src="https://raw.githubusercontent.com/CTTY/design-manager-frontend/master/src/img/core-img/logo.jpeg"
                                 height="60"
                                 width="60"
                                 className="nav-brand"
@@ -44,20 +44,16 @@ function Footer(){
                             
                     <div className="footer-content mb-30">
                         <h4>+1-607-379-4550</h4>
-                        <h6>Maplewood Apartment, Ithaca, NY 14850</h6>
+                        <h6>100 Graham Rd., Apt. 10E, Ithaca, NY, 14850</h6>
                     </div>
                             
                     <div className="footer-social-info">
-                        <a href="#" className="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
+                        <a href="https://github.com/CTTY" className="github" data-toggle="tooltip" data-placement="top" title="GitHub"><i
+                                    className="fa fa-github"></i></a>
+                        <a href="https://github.com/CTTY" className="linkedin" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i
+                                    className="fa fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100009688397549" className="facebook" data-toggle="tooltip" data-placement="top" title="Facebook"><i
                                 className="fa fa-facebook"></i></a>
-                        <a href="#" className="twitter" data-toggle="tooltip" data-placement="top" title="Twitter"><i
-                                className="fa fa-twitter"></i></a>
-                        <a href="#" className="pinterest" data-toggle="tooltip" data-placement="top" title="Pinterest"><i
-                                className="fa fa-pinterest"></i></a>
-                        <a href="#" className="instagram" data-toggle="tooltip" data-placement="top" title="Instagram"><i
-                                className="fa fa-instagram"></i></a>
-                        <a href="#" className="youtube" data-toggle="tooltip" data-placement="top" title="YouTube"><i
-                                className="fa fa-youtube-play"></i></a>
                     </div>
                 </div>
             </div>
