@@ -29,7 +29,9 @@ class Header extends Component {
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                    <li><a href="login">- Log In</a></li>
+
                    <li><a href="https://ctty.github.io/Projects/#/DesignManager">- Design Manager</a></li>
+
                    <li><a href="/Email">- Email</a></li>
                  </ul>
                 </li>,
@@ -55,7 +57,7 @@ class Header extends Component {
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/designer.html">- Designer</a></li>
                    <li><a href="https://ctty.github.io/ArtCollectionWebsite/developers.html">- Developers</a></li>
                    <li><a href="/login">- Log In</a></li>
-                   <li><a href="/DesignMainPage">- Design Manager</a></li>
+                   <li><a href="/DesignMainPage">- DesignManager</a></li>
                    <li><a href="/Email">- Email</a></li>
                  </ul>
                 </li>,
