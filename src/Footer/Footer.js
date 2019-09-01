@@ -19,7 +19,7 @@ function Footer(){
                 <Navbar.Brand href="/index.html" className="d-block mb-4">
                             <img
                                 alt=""
-                                src="../img/core-img/logo.jpeg"
+                                src="https://raw.githubusercontent.com/CTTY/design-manager-frontend/master/src/img/core-img/logo.jpeg"
                                 height="60"
                                 width="60"
                                 className="nav-brand"

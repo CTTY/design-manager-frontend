@@ -61,7 +61,7 @@ class App extends Component {
     this.loadCurrentUser();
   }
 
-  handleLogout(redirectTo="https://abbylululu.github.io/ArtCollectionWebsite/", notificationType="success", description="You're successfully logged out.") {
+  handleLogout(redirectTo="https://ctty.github.io/ArtCollectionWebsite/", notificationType="success", description="You're successfully logged out.") {
     localStorage.removeItem(ACCESS_TOKEN);
 
     this.setState({
