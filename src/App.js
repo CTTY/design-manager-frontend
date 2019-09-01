@@ -97,7 +97,6 @@ class App extends Component {
           <Route exact path="/Email" component={Email} />
           <Route path="/login" 
                  render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
-          <Route path="/DesignMainPage" component={DesignMainPage} />
           <PrivateRoute authenticated={this.state.isAuthenticated} path="/DesignMainPage" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
       </Switch>
         <Footer />
