@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/design-manager-frontend/static/css/main.ff62ae8c.chunk.css",
-    "main.js": "/design-manager-frontend/static/js/main.95e80a4e.chunk.js",
-    "main.js.map": "/design-manager-frontend/static/js/main.95e80a4e.chunk.js.map",
+    "main.css": "/design-manager-frontend/static/css/main.0111232e.chunk.css",
+    "main.js": "/design-manager-frontend/static/js/main.79744720.chunk.js",
+    "main.js.map": "/design-manager-frontend/static/js/main.79744720.chunk.js.map",
     "runtime~main.js": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js",
     "runtime~main.js.map": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js.map",
     "static/css/2.13645106.chunk.css": "/design-manager-frontend/static/css/2.13645106.chunk.css",
-    "static/js/2.48b3dc2a.chunk.js": "/design-manager-frontend/static/js/2.48b3dc2a.chunk.js",
-    "static/js/2.48b3dc2a.chunk.js.map": "/design-manager-frontend/static/js/2.48b3dc2a.chunk.js.map",
+    "static/js/2.30eadc0f.chunk.js": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js",
+    "static/js/2.30eadc0f.chunk.js.map": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js.map",
     "index.html": "/design-manager-frontend/index.html",
-    "precache-manifest.e0420a8f68126aaf733b05744ab03c11.js": "/design-manager-frontend/precache-manifest.e0420a8f68126aaf733b05744ab03c11.js",
+    "precache-manifest.4260230991173e3fa2feec9032d0bf16.js": "/design-manager-frontend/precache-manifest.4260230991173e3fa2feec9032d0bf16.js",
     "service-worker.js": "/design-manager-frontend/service-worker.js",
     "static/css/2.13645106.chunk.css.map": "/design-manager-frontend/static/css/2.13645106.chunk.css.map",
-    "static/css/main.ff62ae8c.chunk.css.map": "/design-manager-frontend/static/css/main.ff62ae8c.chunk.css.map",
+    "static/css/main.0111232e.chunk.css.map": "/design-manager-frontend/static/css/main.0111232e.chunk.css.map",
     "static/media/style.css": "/design-manager-frontend/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/react-bootstrap-carousel.css": "/design-manager-frontend/static/media/react-bootstrap-carousel.f7448c04.ttf"
   }

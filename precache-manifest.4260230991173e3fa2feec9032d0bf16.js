@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9e3838a63b1b090c3741352bc2e5cd6b",
+    "revision": "68c5a694e237769237d51e40da23bca6",
     "url": "/design-manager-frontend/index.html"
   },
   {
-    "revision": "a841269ba4e6bb8fa190",
+    "revision": "4d8611443ca894fe3301",
     "url": "/design-manager-frontend/static/css/2.13645106.chunk.css"
   },
   {
-    "revision": "46fc331b683f6ee416a6",
-    "url": "/design-manager-frontend/static/css/main.ff62ae8c.chunk.css"
+    "revision": "66e05b118de2ab76a1d6",
+    "url": "/design-manager-frontend/static/css/main.0111232e.chunk.css"
   },
   {
-    "revision": "a841269ba4e6bb8fa190",
-    "url": "/design-manager-frontend/static/js/2.48b3dc2a.chunk.js"
+    "revision": "4d8611443ca894fe3301",
+    "url": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js"
   },
   {
-    "revision": "46fc331b683f6ee416a6",
-    "url": "/design-manager-frontend/static/js/main.95e80a4e.chunk.js"
+    "revision": "66e05b118de2ab76a1d6",
+    "url": "/design-manager-frontend/static/js/main.79744720.chunk.js"
   },
   {
     "revision": "deaaedc084dafc5d8a3c",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-BoldItalic.00b42de8.eot"
   },
   {
-    "revision": "89366c7970ced3e13845dd3aa263d8d8",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-BoldItalic.89366c79.svg"
+    "revision": "9e0731b80d341eadb630905199ebed58",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-BoldItalic.9e0731b8.svg"
   },
   {
     "revision": "ad596cccb0baf7ec349d6fbb4bc673ff",
@@ -48,16 +48,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-BoldItalic.f453c76a.woff"
   },
   {
+    "revision": "058d423064c5bc640ccf75ab02fbba07",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-Italic.058d4230.svg"
+  },
+  {
     "revision": "4732307b60a73b10498ce477fe4eec8e",
     "url": "/design-manager-frontend/static/media/HKGrotesk-Italic.4732307b.eot"
   },
   {
     "revision": "4c6dd576a7d8a00634aaab9b08ad458d",
     "url": "/design-manager-frontend/static/media/HKGrotesk-Italic.4c6dd576.woff2"
-  },
-  {
-    "revision": "5815414250504d22ceabdfd001dd635e",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-Italic.58154142.svg"
   },
   {
     "revision": "a319380349507d55e52bdc53372fe410",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-Medium.00406ecd.ttf"
   },
   {
-    "revision": "4ea537f86576fc14731f25d15aa345e2",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-Medium.4ea537f8.svg"
-  },
-  {
     "revision": "845fe65e0a876b8d94eb2c730602acd8",
     "url": "/design-manager-frontend/static/media/HKGrotesk-Medium.845fe65e.eot"
+  },
+  {
+    "revision": "b1ec5323789de6e50ea0feda4e6eb0a7",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-Medium.b1ec5323.svg"
   },
   {
     "revision": "c0108060cdd384756c51a2788d3f1a81",
@@ -88,12 +88,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-Medium.ef1acd65.woff2"
   },
   {
-    "revision": "c35e04417c72cb52d0fbd555151be411",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-MediumItalic.c35e0441.eot"
+    "revision": "87d0a314eb35399fb852b774cc27d128",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-MediumItalic.87d0a314.svg"
   },
   {
-    "revision": "ccc02509f28fc43c8577270be6ed8fb0",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-MediumItalic.ccc02509.svg"
+    "revision": "c35e04417c72cb52d0fbd555151be411",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-MediumItalic.c35e0441.eot"
   },
   {
     "revision": "d6f4fa7b0fadff1971af5af1b27f1229",
@@ -116,10 +116,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-Regular.1d7636f1.woff2"
   },
   {
-    "revision": "281f65cb9b6f5eb00770c26d8483989a",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-Regular.281f65cb.svg"
-  },
-  {
     "revision": "bf6956fca3d6d1a5687ed2eb35ab4cd1",
     "url": "/design-manager-frontend/static/media/HKGrotesk-Regular.bf6956fc.eot"
   },
@@ -128,8 +124,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-Regular.de59a69f.ttf"
   },
   {
-    "revision": "06ea39c3be5d30b0e7234bf90685ab39",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-SemiBold.06ea39c3.svg"
+    "revision": "e3b1969c6b1fc59d6ba88ad49a4b6bc8",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-Regular.e3b1969c.svg"
+  },
+  {
+    "revision": "371c52e7614619bbce2eaa4bece58beb",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-SemiBold.371c52e7.svg"
   },
   {
     "revision": "3e6bd8241587b052959c807a0e35e14c",
@@ -156,8 +156,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/HKGrotesk-SemiBoldItalic.a041d32e.woff2"
   },
   {
-    "revision": "c9990d0d669b18b8e2acee9079b7dcb3",
-    "url": "/design-manager-frontend/static/media/HKGrotesk-SemiBoldItalic.c9990d0d.svg"
+    "revision": "c0e3bce82102e62736ad0047fc296ead",
+    "url": "/design-manager-frontend/static/media/HKGrotesk-SemiBoldItalic.c0e3bce8.svg"
   },
   {
     "revision": "f35fec5dcdc071e99b75ed335a0cc68c",
@@ -172,6 +172,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/classy.4dfb9d19.eot"
   },
   {
+    "revision": "6b961d058197d5c1a9c75ac326dedbf0",
+    "url": "/design-manager-frontend/static/media/classy.6b961d05.svg"
+  },
+  {
     "revision": "999ab95a97ed648512c4e9fd82441129",
     "url": "/design-manager-frontend/static/media/classy.999ab95a.woff"
   },
@@ -180,16 +184,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/media/classy.c6dd5e6e.ttf"
   },
   {
-    "revision": "f4cda31817c399fc9c505e6ccd2d0a36",
-    "url": "/design-manager-frontend/static/media/classy.f4cda318.svg"
-  },
-  {
     "revision": "674f50d287a8c48dc19ba404d20fe713",
     "url": "/design-manager-frontend/static/media/fontawesome-webfont.674f50d2.eot"
   },
   {
-    "revision": "acf3dcb7ff752b5296ca23ba2c7c2606",
-    "url": "/design-manager-frontend/static/media/fontawesome-webfont.acf3dcb7.svg"
+    "revision": "912ec66d7572ff821749319396470bde",
+    "url": "/design-manager-frontend/static/media/fontawesome-webfont.912ec66d.svg"
   },
   {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
