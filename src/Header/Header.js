@@ -72,7 +72,7 @@ class Header extends Component {
                 <li><a href="https://ctty.github.io/design-manager-frontend/#/login">Log In</a></li>,
                 <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignMainPage">Design Manager</a></li>,
                 <li><a href="https://ctty.github.io/design-manager-frontend/#/Email">Email</a></li>,
-                <li><a href="/DesignManagerDemo">DesignManagerDemo</a></li>
+                <li><a href="https://ctty.github.io/design-manager-frontend/#/DesignManagerDemo">DesignManagerDemo</a></li>
             ]
         }
 
