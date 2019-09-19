@@ -81,7 +81,7 @@ class App extends Component {
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();
-    this.props.history.push("https://ctty.github.io/design-manager-frontend/#/DesignMainPage");
+    this.props.history.push("/#/DesignMainPage");
   }
 
   render(){
@@ -98,7 +98,7 @@ class App extends Component {
           <Route exact path="/DesignManagerDemo" component={DesignMainPage} />
           <Route path="/login" 
                  render={(props) => <Login onLogin={this.handleLogin} {...props} />}></Route>
-          <PrivateRoute authenticated={this.state.isAuthenticated} path="DesignMainPage" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
+          <PrivateRoute authenticated={this.state.isAuthenticated} path="/#/DesignMainPage" component={DesignMainPage} handleLogout={this.handleLogout}></PrivateRoute>
       </Switch>
         <Footer />
       </React.Fragment>
