@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/design-manager-frontend/static/css/main.0111232e.chunk.css",
-    "main.js": "/design-manager-frontend/static/js/main.aaebbee9.chunk.js",
-    "main.js.map": "/design-manager-frontend/static/js/main.aaebbee9.chunk.js.map",
+    "main.css": "/design-manager-frontend/static/css/main.a6f90546.chunk.css",
+    "main.js": "/design-manager-frontend/static/js/main.2228dbf2.chunk.js",
+    "main.js.map": "/design-manager-frontend/static/js/main.2228dbf2.chunk.js.map",
     "runtime~main.js": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js",
     "runtime~main.js.map": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js.map",
     "static/css/2.13645106.chunk.css": "/design-manager-frontend/static/css/2.13645106.chunk.css",
     "static/js/2.3b9e6117.chunk.js": "/design-manager-frontend/static/js/2.3b9e6117.chunk.js",
     "static/js/2.3b9e6117.chunk.js.map": "/design-manager-frontend/static/js/2.3b9e6117.chunk.js.map",
     "index.html": "/design-manager-frontend/index.html",
-    "precache-manifest.d19c43b5b986a92b35bc6f9816c8e73d.js": "/design-manager-frontend/precache-manifest.d19c43b5b986a92b35bc6f9816c8e73d.js",
+    "precache-manifest.8a6a3644bb2fda641ae0572ef26117e4.js": "/design-manager-frontend/precache-manifest.8a6a3644bb2fda641ae0572ef26117e4.js",
     "service-worker.js": "/design-manager-frontend/service-worker.js",
     "static/css/2.13645106.chunk.css.map": "/design-manager-frontend/static/css/2.13645106.chunk.css.map",
-    "static/css/main.0111232e.chunk.css.map": "/design-manager-frontend/static/css/main.0111232e.chunk.css.map",
+    "static/css/main.a6f90546.chunk.css.map": "/design-manager-frontend/static/css/main.a6f90546.chunk.css.map",
     "static/media/style.css": "/design-manager-frontend/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/react-bootstrap-carousel.css": "/design-manager-frontend/static/media/react-bootstrap-carousel.f7448c04.ttf"
   }
