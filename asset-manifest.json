@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/design-manager-frontend/static/css/main.a6f90546.chunk.css",
+    "main.css": "/design-manager-frontend/static/css/main.4ff37455.chunk.css",
     "main.js": "/design-manager-frontend/static/js/main.2228dbf2.chunk.js",
     "main.js.map": "/design-manager-frontend/static/js/main.2228dbf2.chunk.js.map",
     "runtime~main.js": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js",
@@ -9,10 +9,10 @@
     "static/js/2.3b9e6117.chunk.js": "/design-manager-frontend/static/js/2.3b9e6117.chunk.js",
     "static/js/2.3b9e6117.chunk.js.map": "/design-manager-frontend/static/js/2.3b9e6117.chunk.js.map",
     "index.html": "/design-manager-frontend/index.html",
-    "precache-manifest.8a6a3644bb2fda641ae0572ef26117e4.js": "/design-manager-frontend/precache-manifest.8a6a3644bb2fda641ae0572ef26117e4.js",
+    "precache-manifest.a2c9256f5e91b2f98a335c2720700ba8.js": "/design-manager-frontend/precache-manifest.a2c9256f5e91b2f98a335c2720700ba8.js",
     "service-worker.js": "/design-manager-frontend/service-worker.js",
     "static/css/2.13645106.chunk.css.map": "/design-manager-frontend/static/css/2.13645106.chunk.css.map",
-    "static/css/main.a6f90546.chunk.css.map": "/design-manager-frontend/static/css/main.a6f90546.chunk.css.map",
+    "static/css/main.4ff37455.chunk.css.map": "/design-manager-frontend/static/css/main.4ff37455.chunk.css.map",
     "static/media/style.css": "/design-manager-frontend/static/media/fontawesome-webfont.fee66e71.woff",
     "static/media/react-bootstrap-carousel.css": "/design-manager-frontend/static/media/react-bootstrap-carousel.f7448c04.ttf"
   }
