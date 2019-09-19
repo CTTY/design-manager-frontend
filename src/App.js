@@ -76,12 +76,12 @@ class App extends Component {
     });
   }
 
-  handleLogin() {
+  handleLogin(redirectTo="https://ctty.github.io/design-manager-frontend/#/DesignMainPage") {
     notification.success({
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();
-    this.props.history.push("https://ctty.github.io/design-manager-frontend/#/DesignMainPage");
+    this.props.history.push(redirectTo);
   }
 
   render(){

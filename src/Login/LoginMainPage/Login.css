@@ -3,13 +3,13 @@
 }
 
 .login-form {
-    max-width: 300px;
+    width: 400px;
   }
 
 .login-form .email{
     background-color: #ffffff;
-    padding: 8px;
-    width:300px;
+    padding: 15px;
+    width:100%;
     margin-top:0 auto;
     font-size:1em;
     border-radius:4px;
@@ -17,8 +17,8 @@
 
 .login-form .password{
     background-color: #ffffff;
-    padding: 8px;
-    width:300px;
+    padding: 15px;
+    width:100%;
     font-size:1em;
   }
 
