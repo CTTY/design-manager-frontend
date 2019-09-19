@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8b4a1b3cb46e9a6327843819516708bf",
+    "revision": "7b694f3dfc3d7b0207db502bdf8e4501",
     "url": "/design-manager-frontend/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/css/2.13645106.chunk.css"
   },
   {
-    "revision": "7ebb70ebe49af3a9d024",
+    "revision": "c5ef1744b5b07af6de4c",
     "url": "/design-manager-frontend/static/css/main.0111232e.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js"
   },
   {
-    "revision": "7ebb70ebe49af3a9d024",
-    "url": "/design-manager-frontend/static/js/main.107e00b7.chunk.js"
+    "revision": "c5ef1744b5b07af6de4c",
+    "url": "/design-manager-frontend/static/js/main.e05a2e87.chunk.js"
   },
   {
     "revision": "deaaedc084dafc5d8a3c",
