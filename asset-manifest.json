@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/design-manager-frontend/static/css/main.0111232e.chunk.css",
-    "main.js": "/design-manager-frontend/static/js/main.dcef6238.chunk.js",
-    "main.js.map": "/design-manager-frontend/static/js/main.dcef6238.chunk.js.map",
+    "main.js": "/design-manager-frontend/static/js/main.c7b99016.chunk.js",
+    "main.js.map": "/design-manager-frontend/static/js/main.c7b99016.chunk.js.map",
     "runtime~main.js": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js",
     "runtime~main.js.map": "/design-manager-frontend/static/js/runtime~main.194ffa4f.js.map",
     "static/css/2.13645106.chunk.css": "/design-manager-frontend/static/css/2.13645106.chunk.css",
     "static/js/2.30eadc0f.chunk.js": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js",
     "static/js/2.30eadc0f.chunk.js.map": "/design-manager-frontend/static/js/2.30eadc0f.chunk.js.map",
     "index.html": "/design-manager-frontend/index.html",
-    "precache-manifest.6918423aaf133ff79feb1ee270b2d81e.js": "/design-manager-frontend/precache-manifest.6918423aaf133ff79feb1ee270b2d81e.js",
+    "precache-manifest.c0db70f5702da7ecf1ecd6fe0ee82d11.js": "/design-manager-frontend/precache-manifest.c0db70f5702da7ecf1ecd6fe0ee82d11.js",
     "service-worker.js": "/design-manager-frontend/service-worker.js",
     "static/css/2.13645106.chunk.css.map": "/design-manager-frontend/static/css/2.13645106.chunk.css.map",
     "static/css/main.0111232e.chunk.css.map": "/design-manager-frontend/static/css/main.0111232e.chunk.css.map",
