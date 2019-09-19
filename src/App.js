@@ -81,7 +81,7 @@ class App extends Component {
       description: "You're successfully logged in.",
     });
     this.loadCurrentUser();
-    this.props.history.push("/DesignMainPage");
+    this.props.history.push("https://ctty.github.io/design-manager-frontend/#/DesignMainPage");
   }
 
   render(){
