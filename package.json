@@ -4,11 +4,11 @@
   "private": true,
   "homepage": "https://ctty.github.io/design-manager-frontend",
   "dependencies": {
-    "antd": "^3.22.2",
+    "antd": "^6.0.0",
     "axios": "^1.12.0",
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
-    "react-bootstrap": "^1.0.0-beta.11",
+    "react-bootstrap": "^1.6.8",
     "react-bootstrap-carousel": "^3.4.2",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",
